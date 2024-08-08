@@ -1,0 +1,188 @@
+/* Set the background to sky blue with clouds */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(skyblue, white);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#app {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    z-index: 10; /* Ensure this is above the clouds */
+    position: relative;
+}
+
+.question-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.option {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.option:hover {
+    background-color: #e6e6e6;
+    transform: scale(1.05);
+}
+
+.next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #45a049;
+}
+
+/* Clouds */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px white;
+    z-index: 1; /* Ensure the clouds are behind the content */
+}
+
+body::before {
+    width: 150px;
+    height: 150px;
+    top: 50px;
+    left: 30%;
+}
+
+body::after {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 60%;
+}
+
+/* Feedback message styling */
+.feedback {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+.feedback.correct {
+    background-color: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+/* Intro section styling */
+#intro {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 80%;
+    margin: auto;
+}
+
+#intro h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#intro p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+}
+
+#intro button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#intro button:hover {
+    background-color: #45a049;
+}
+
+#question-number {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Final screen styling */
+#final-screen {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 80%;
+    margin: auto;
+}
+
+#final-screen h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#final-screen p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#final-screen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#final-screen button:hover {
+    background-color: #45a049;
+}
